@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+         <meta charset="utf-8">
+         <title>Flexbox</title>
+        <style>
+            body>div {
+                display: flex; 
+                flex-flow: row wrap;
+                height: 500px;
+                padding: 1em;
+                background-color: gray;
+            }
+
+            div>div {
+                width: 200px;
+                height: 200px;
+                background-color: pink;
+                border: magenta 1px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+        </div>
+    </body>
+</html>

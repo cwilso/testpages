@@ -1,0 +1,19 @@
+application: cwilsotest-hrd
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html
+
+- url: /cwilso_files
+  static_dir: cwilso_files
+
+- url: /test
+  static_dir: test
+  
+- url: /
+  static_dir: assets
