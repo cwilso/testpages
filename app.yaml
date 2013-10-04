@@ -12,8 +12,8 @@ handlers:
 - url: /cwilso_files
   static_dir: cwilso_files
 
-- url: /test
-  static_dir: test
+- url: /tests
+  static_dir: tests
   
 - url: /
   static_dir: assets
