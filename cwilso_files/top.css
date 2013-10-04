@@ -271,11 +271,10 @@ div.sharedaddy.sd-rating-enabled .sd-like h3, div.sharedaddy.sd-sharing-enabled 
 	-webkit-border-radius: 2px 2px 0 0;
 	-o-border-radius: 2px 2px 0 0; 
 	-ms-border-radius: 2px 2px 0 0; 
-	border-radius: 2px 2px0 0 0;
+	border-radius: 2px 2px 0 0;
 }
 
 #bit a.bsub span { 
-	background: url(/wp-content/blog-plugins/loggedout-follow/../../mu-plugins/admin-bar/wpcom-admin-bar-icons.png) 0 -77px no-repeat;
 	padding-left: 19px;
 }
 
@@ -732,7 +731,7 @@ body div.slideshow-window * img {
 }
 
 .slideshow-line-height-hack {
-	overflow: hide;
+	overflow: hidden;
 	width: 0px;
 	font-size: 0px;
 }
@@ -1429,14 +1428,12 @@ pre {
 	}
 
 #wrapper, #headerimg { width: 760px; position: relative; }
-#wrapper { background: url(/wp-content/themes/pub/chaoticsoul/images/content_bkg.gif) repeat-y top left;}
 .single #wrapper {
 	border-left: 1px solid #363430;
 	border-right: 1px solid #363430;
 }
 
 #header-overlay {
-	background: url(/wp-content/themes/pub/chaoticsoul/images/header_overlay.gif) no-repeat top left;
 	width: 760px;
 	height: 151px;
 	z-index: 5;
@@ -1858,10 +1855,7 @@ div.jp-carousel-fadeaway {
 }
 
 @media
-only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (min-device-pixel-ratio: 1.5) {
+only screen and (-webkit-min-device-pixel-ratio: 1.5) {
 	.jp-carousel-next-button span,
 	.jp-carousel-previous-button span {
 		background-image: url(/wp-content/mu-plugins/carousel/./images/arrows-2x.png);
@@ -2136,10 +2130,7 @@ div.jp-carousel-buttons a.jp-carousel-like:hover {
 }
 
 @media
-only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (min-device-pixel-ratio: 1.5) {
+only screen and (-webkit-min-device-pixel-ratio: 1.5) {
 	div.jp-carousel-buttons a.jp-carousel-like,
 	div.jp-carousel-buttons a.jp-carousel-reblog,
 	div.jp-carousel-buttons a.jp-carousel-commentlink,
@@ -2661,7 +2652,7 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
 }
 
 #jp-carousel-comments-loading {
-	font: 444 15px/1.7 "Helvetica Neue", sans-serif !important;
+	font: 15px/1.7 "Helvetica Neue", sans-serif !important;
 	display: none;
 	color: #999;
 	text-align: left;
@@ -2965,7 +2956,6 @@ textarea#jp-carousel-comment-form-comment-field:focus::-webkit-input-placeholder
 .tiled-gallery .tiled-gallery-item a { /* Needs to reset some properties for theme compatibility */
 	background: transparent;
 	border: none;
-	color: none;
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
@@ -3424,7 +3414,7 @@ body.simple-homepage-experiment .simple-homepage {
  */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-  only screen and (min-resolution: 144dpi) {
+  only screen and (min-resolution: 144dppx) {
 
 	.simple-homepage-experiment h1 {
 		background: transparent url(/wp-content/themes/h4/i/simple-homepage/wp-logo-2x.png) no-repeat !important;
