@@ -1365,8 +1365,8 @@ Status: inactive
 /*  -----|  Globals  |------------------------------------------------------  */
 
 body {
-	background-color: #161410;
-	color: #999;
+	background-color: #AAA;
+	color: #111;
 	font: 62.5%/125% 'Trebuchet MS', Tahoma, Arial, Helvetica, sans-serif;
 	margin: 0;
 	padding: 0;
@@ -1375,9 +1375,9 @@ body {
 /* hr { display: none; } */
 
 .hr {
-	background-color: #22201d;
-	border: 1px solid #363430;
-	height: 10px;
+	background-color: #CCC;
+	aborder: 1px solid #363430;
+	height: 0.25em;
 	margin: 10px 0;
 	width: 758px;
 	}
@@ -1470,8 +1470,8 @@ pre {
 	}
 
 	#sidebar { border-left: 0; float: left; width: 200px; }
-	#sidebar h3 { color: #bd934f; margin: 15px 0 5px; font-variant: small-caps; font-size: 12px; }
-	#sidebar h3 a { color: #bd934f; }
+	#sidebar h3 { color: #a76e11; margin: 15px 0 5px; font-variant: small-caps; font-size: 12px; }
+	#sidebar h3 a { color: #a76e11; }
 	#sidebar ul, #akismetwrap { margin: 0 0 10px; padding: 0; border-top: 1px solid #363430; border-bottom: 1px solid #363430; }
 	#sidebar li, #akismetwrap { display: block; padding: 4px 10px; background: #22201d; margin: 1px 0; }
 	#sidebar li:hover { background: #363430; }
@@ -1499,7 +1499,7 @@ ul.navigation {
 .post { padding: 10px 0 0; clear: both; }
 .widecolumn .post { padding: 0; margin: 0; }
 
-.sticky, .top { padding: 15px 10px 0px; background: #1b1814; margin-bottom: 15px; border-bottom: 1px solid #35302a; }
+.sticky, .top { padding: 15px 10px 0px; margin-bottom: 15px; border-bottom: 1px solid #35302a; }
 .lastfive { padding-left: 10px; padding-right: 10px; }
 	.postmetadata { margin: 3px 0; padding: 0; clear: both;}
 		.postmetadata a { font-weight: bold; }
@@ -1513,7 +1513,7 @@ ul.navigation {
 	.top .entry { font-size: 1.1em; }
 	.entrytext { padding: 0 10px 0; line-height: 2em; font-size: 1.1em; }
 
-	.entrytext h2 { border-bottom: 1px solid #bd934f; display: block; }
+	.entrytext h2 { border-bottom: 1px solid #a76e11; display: block; }
 	.entry ul, .entrytext ul { list-style-type: square; }
 
 /* Comments Structure */
@@ -1553,10 +1553,10 @@ h1, h2, h3, h4, h5, h6 { font-family: Georgia, 'Times New Roman', serif; font-we
 
 h1 { text-transform: lowercase; color: #fff; font-size: 2em; margin: 0 0 8px; }
 h1:before, h1:after { content: " . . "; color: #444; }
-h1 span { color: #bd934f; }
+h1 span { color: #a76e11; }
 
-h2 { color: #bd934f; font-size: 1.25em; line-height: 1.15em; margin: 0; padding: 1px 0; display: inline; border-bottom: 1px solid #35302a; }
-	.post h2 a { color: #bd934f; }
+h2 { color: #a76e11; font-size: 1.25em; line-height: 1.15em; margin: 0; padding: 1px 0; display: inline; border-bottom: 1px solid #35302a; }
+	.post h2 a { color: #a76e11; }
 	.post h2.first { font-size: 1.75em; }
 
 	.widecolumn h2.title {
@@ -1569,7 +1569,7 @@ h2 { color: #bd934f; font-size: 1.25em; line-height: 1.15em; margin: 0; padding:
 
 .description { color: #666; font-weight: bold; }
 
-.comments h3 { margin: 0 0 10px 0; color: #bd934f; }
+.comments h3 { margin: 0 0 10px 0; color: #a76e11; }
 
 
 /* =Menu
@@ -1641,7 +1641,7 @@ h2 { color: #bd934f; font-size: 1.25em; line-height: 1.15em; margin: 0; padding:
 #access .current-menu-ancestor > a,
 #access .current_page_item > a,
 #access .current_page_ancestor > a {
-	color: #bd934f;
+	color: #a76e11;
 }
 
 
@@ -1797,7 +1797,7 @@ img.alignleft {
 	display: none;
 }
 #respond .required {
-	color: #bd934f;
+	color: #a76e11;
 }
 #respond .form-submit {
 	float: left;
