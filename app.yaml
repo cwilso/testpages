@@ -9,8 +9,8 @@ handlers:
   static_files: index.html
   upload: index.html
 
-- url: /cwilso_files
-  static_dir: cwilso_files
+- url: /blog
+  static_dir: blog
 
 - url: /tests
   static_dir: tests
