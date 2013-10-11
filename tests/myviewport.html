@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>Viewport</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script>
+function updateWindowSize() {
+	document.getElementById("window").innerHTML = "" + window.innerWidth + " X " + window.innerHeight;
+
+}
+
+window.onload = function () {
+	document.getElementById("viewport").innerHTML = "" + window.screen.width + " X " + window.screen.height;
+	updateWindowSize();
+	window.onresize = updateWindowSize;
+}
+
+</script>
+<style>
+body { display: flex; margin:0; height: 100vh;
+	flex-direction: column;
+	text-align: center;
+	justify-content: space-around; align-content: center; font: 2em Arial, sans-serif;}
+.spacer { flex-grow:3;}
+div { flex-grow:1; min-height: 1em;}
+</style>
+</head>
+<body>
+	<div class="spacer"></div>
+	<div>This device's viewport is</div>
+	<div id="viewport"></div>
+	<div>Its window size is</div>
+	<div id="window"></div>
+	<div class="spacer"></div>
+</body>
+</html>

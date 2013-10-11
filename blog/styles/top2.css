@@ -1410,7 +1410,7 @@ pre {
 #page {
 	margin: 50px auto 25px;
 	padding: 0;
-	width: 760px;
+	width: 90vw;
 	}
 
 #header {
@@ -1443,7 +1443,7 @@ pre {
 	overflow: hidden;
 	}
 
-	#content { float: left; font-size: 1.1em; width: 517px; }
+	#content { float: left; font-size: 1.1em; width: 70%; }
 
 .single-attachment #content {
 	border: 0 none !important;
@@ -1458,7 +1458,7 @@ pre {
 		text-align: center;
 	}
 
-	#sidebar { border-left: 0; float: right; width: 200px; }
+	#sidebar { border-left: 0; float: right; width: 28%; }
 	#sidebar h3 { color: #a76e11; margin: 15px 0 5px; font-variant: small-caps; font-size: 12px; }
 	#sidebar h3 a { color: #a76e11; }
 	#sidebar ul, #akismetwrap { margin: 0 0 10px; padding: 0; border-top: 1px solid #363430; border-bottom: 1px solid #363430; }
