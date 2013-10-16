@@ -17,12 +17,18 @@ window.onload = function () {
 
 </script>
 <style>
-body { display: flex; margin:0; height: 100vh;
+body { display: -webkit-box; display: flex; margin:0; height: 100vh;
 	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
 	text-align: center;
-	justify-content: space-around; align-content: center; font: 2em Arial, sans-serif;}
+	justify-content: space-around; align-content: center; font: 1.5em Arial, sans-serif;
+	-webkit-justify-content: space-around; 
+}
 .spacer { flex-grow:3;}
 div { flex-grow:1; min-height: 1em;}
+#viewport, #window { font-size: 150%;}
 </style>
 </head>
 <body>
