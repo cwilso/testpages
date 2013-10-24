@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>Test page</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+	body { margin: 0 0;}
+	#test { border: 1px solid blue; }
+	#content2 { font-size: 16px;}
+</style>
+<script>
+function updateSize() {
+	document.getElementById("test").innerHTML = "" + 
+			document.documentElement.clientWidth + " x " + 
+			document.documentElement.clientHeight + ": " +
+			document.getElementById("content").offsetHeight + ": " +
+			document.getElementById("content2").offsetHeight;
+}
+	window.onload = function (){
+		updateSize();
+		window.onresize = updateSize;
+	}
+</script>
+</head>
+<body>
+	<div id="test"></div>
+	<p id="content">But</p>
+	<p id="content2">But</p>
+</body>
+</html>
