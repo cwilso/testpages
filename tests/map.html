@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Welcome to Wilson Hardware!</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<style>
+			body, html { margin: 0 0;}
+			#header{
+				background: #ffffcc; font: 12pt Arial, sans-serif;
+				-webkit-transition: height 1s ease;
+				overflow: hidden;
+			}
+
+			#header div { padding: 0.5em 0.5em;}
+			h1 { font: italic 20pt Arial, sans-serif; padding: 0.25em 0.5em; margin: 0 0;}
+		</style>
+		<script>
+		navigator.geolocation.getCurrentPosition(function(position) {
+			var h = document.getElementById("header");
+			h.style.height="3em";
+		});
+		</script>
+	</head>
+	<body>
+	<h1>Welcome to Wilson Hardware!</h1>
+	<div id="header" style="height: 0px"><div>Your closest store is at 131 Roofleak Rd, Santa Clara, CA.  We are open from 7AM until 11PM today.</div></div>
+	</body>
+</html>

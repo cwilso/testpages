@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Test page</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<style>
+		</style>
+		<script>
+		var constraints = {video: true};
+		var localMediaStream = null;
+
+		// prefix monkeypatching
+		navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+
+		function successCallback(stream) {
+			var video = document.querySelector("video");
+			video.src = window.URL.createObjectURL(stream);
+			localMediaStream = stream;
+		}
+
+		function errorCallback(error) {
+		  console.log("navigator.getUserMedia error: ", error);
+		}
+
+		function snapshot() {
+			var video = document.querySelector('video');
+			var canvas = document.querySelector('canvas');
+
+			// make sure the canvas matches the video dimensions
+			canvas.width = video.videoWidth;
+		    canvas.height = video.videoHeight;
+
+		    // now grab the video image and draw it to the canvas
+			var ctx = canvas.getContext('2d');
+		    ctx.drawImage(video, 0, 0);
+		}
+
+		window.onload = function() {
+			var video = document.querySelector('video');
+
+			video.addEventListener('click', snapshot, false);
+			navigator.getUserMedia(constraints, successCallback, errorCallback);
+		}
+		</script>
+	</head>
+	<body>
+	<video autoplay></video>
+	<canvas></canvas>
+	</body>
+</html>
