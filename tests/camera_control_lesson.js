@@ -8,13 +8,16 @@ function openCameraPane(callback, fullscreen) {
 	_myVideoCallback = callback;
 	var constraints = {video: true};
 
-	navigator.getUserMedia(constraints, successCallback, errorCallback);
+	/* Here's where you need to ask for access to the webcam.
+	   Note you have constraints defined above, and callbacks
+	   for success and errors defined below. */
 }
 
 function successCallback(stream) {
 	var video = createVideoUserInterface();
 
-	video.src = window.URL.createObjectURL(stream);
+	/* Here's where you need to associate the stream with the
+	   video element just created. */
 }
 
 function errorCallback(error) {
@@ -24,17 +27,14 @@ function errorCallback(error) {
 function snapshot(ev) {
 	var video = ev.target;
 	var canvas = video.parentElement.canvas;
+	var ctx = canvas.getContext('2d');
 
-	// make sure the canvas matches the video dimensions
+	// make sure the canvas matches the video dimensions and show the canvas
 	canvas.width = video.videoWidth;
 	canvas.height = video.videoHeight;
-
-	// show the canvas, not the video
 	swapInCanvas(video.parentElement);
 
-	// now grab the video image and draw it to the canvas
-	var ctx = canvas.getContext('2d');
-	ctx.drawImage(video, 0, 0);
+	/* Now you need to draw the video image to the canvas context. */
 }
 
 function useThisImage(ev) {
@@ -45,7 +45,10 @@ function useThisImage(ev) {
 	if (!callback)
 		return;
 
-	callback( canvas.toDataURL('image/png') );
+	callback( 
+		/* The callback takes an URL as a parameter.  
+		   Create one from the canvas. */
+	);
 }
 
 function retakeImage(ev) {
