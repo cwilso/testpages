@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Test page</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<style>
+		</style>
+		<script>
+		var constraints = {video: true};
+
+		// prefix monkeypatching
+		navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+
+		function successCallback(stream) {
+		  var video = document.querySelector("video");
+		  video.src = window.URL.createObjectURL(stream);
+		}
+
+		function errorCallback(error) {
+		  console.log("navigator.getUserMedia error: ", error);
+		}
+
+		navigator.getUserMedia(constraints, successCallback, errorCallback);
+		</script>
+	</head>
+	<body>
+	<video id="thevid" autoplay>
+	</body>
+</html>

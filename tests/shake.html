@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Test page</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<style>
+		 body { color: red; font: 48pt Arial, sans-serif; text-align: center;}
+		</style>
+		<script>
+			var lastX=null,
+				lastY=null,
+				lastZ=null;
+			var sensitivityFloor=60;
+
+		    function init() {
+		      if ((window.DeviceMotionEvent) || ('listenForDeviceMovement' in window)) {
+		        window.addEventListener('devicemotion', deviceMotionHandler, false);
+		      } else {
+		        document.body.innerHTML = "Not supported on your device or browser.  Sorry."
+		      }
+		    }
+		    
+		    window.onload = init;
+
+		    function deviceMotionHandler(eventData) {
+		    	var x, y, z;
+		      // Grab the acceleration
+		      x = eventData.accelerationIncludingGravity.x;
+		      y = eventData.accelerationIncludingGravity.y;
+		      z = eventData.accelerationIncludingGravity.z;
+
+			  if ((x*x + y*y + z*z) > 1500)
+			  	showShake();
+		    }
+
+		    var indicatorTimeout = null;
+
+		    function clearShake() {
+		    	indicatorTimeout = null;
+		    	document.body.innerHTML = "";
+		    }
+
+		    function showShake() {
+		    	document.body.innerHTML = "SHAKE!";
+		    	if (indicatorTimeout)
+		    		clearTimeout(indicatorTimeout);
+		    	indicatorTimeout = setTimeout(clearShake,2000);
+
+		    }
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>Test page</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+	body { margin: 0 0;}
+	#test { border: 1px solid blue; }
+	#content { font-size: 2em; background: red;}
+	div { display: inline-block; }
+	#content2 { height: 2em; width: 2em; background: blue;}
+	#content3 { height: 32px; width: 32px; background: cyan;}
+</style>
+<script>
+function updateSize() {
+	document.getElementById("test").innerHTML = "" + 
+			document.documentElement.clientWidth + " x " + 
+			document.documentElement.clientHeight + ": " +
+			document.getElementById("content").offsetHeight + " : " +
+			document.getElementById("content2").offsetHeight + " : " +
+			document.getElementById("content3").offsetHeight;
+}
+	window.onload = function (){
+		updateSize();
+		window.onresize = updateSize;
+	}
+</script>
+</head>
+<body>
+	<p id="test"></p>
+	<div id="content">But</div>
+	<div id="content2"></div>
+	<div id="content3"></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Quick test - device-width</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="quick.css">
+<meta name="viewport" content="width=device-width">
+<script>
+window.onload = init;
+
+function init () {
+	$('recalc').onclick = calculate;
+	calculate();
+}
+
+function calculate() {
+	$('layout').innerHTML = document.documentElement.clientWidth;
+//	$('visual').innerHTML = window.innerWidth;
+}
+
+function $(id) {
+	return document.getElementById(id);
+}
+</script>
+</head>
+
+<body>
+
+<p>This page has <code>width=device-width</code>.</p>
+
+<p>Its layout viewport width is <span id="layout"></span>.</p>
+
+<p><button id="recalc">Recalculate</button> after changing orientation.</p>
+
+<p><a href="quickinitialscale.html">Try it</a> with <code>initial-scale</code>.</p>
+
+</body>
+</html>

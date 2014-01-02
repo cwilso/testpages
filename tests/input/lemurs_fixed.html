@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Lemurpalooza!</title>
+		<style>
+			body { font: 1.1em Arial, sans-serif;
+				margin: 0 1em;
+				color: white;
+				background: #2a2a2a;
+			}
+			::-webkit-input-placeholder { font-style:italic; }
+			.container { 
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				max-width: 20em;
+				text-align: left;
+				margin: 0em 0;
+			}
+			.container>* {
+				flex-grow:0;
+			}
+			.container :first-child {
+				flex-grow:1;
+			}
+			input {
+				width: 80%;
+				background: black;
+				color: #ccc;
+				font-size:1em;
+				margin-bottom: 0.5em;
+			}
+			input[type=submit] {
+				width:82%;
+				background: gray;
+				color:black;
+				margin-top: 1em;
+			}
+			a { color: cyan;
+				text-align:center;
+				margin: 2em 4em 3em 0;
+			}
+		</style>
+	</head>
+	<body>
+		<p>Welcome Lemur aficionados!</p>
+		<form id="lemurs">
+		<div class="container"><div>Name:</div><input type="text"></div>
+		<div class="container"><div>Telephone:</div><input title="US phone number with area code: 222-555-1212 or 2225551212" pattern="\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}" type="tel"></div>
+		<div class="container"><div>Email:</div><input type="email"></div>
+		<div class="container"><div>Favorite type of lemur:</div><input type="text"></div>
+		<div class="container"><div>When did you start liking lemurs:</div><input type="date"></div>
+		<div class="container"><div>What color is your favorite lemur:</div><input type="color" value="#aa3322"></div>
+		<div class="container"><div>URL to your favorite lemur picture:</div><input type="url"></div>
+		<div class="container"><div>How many lemurs do you know:</div><input type="number"></div>
+		<div class="container"><input type="submit"></div>
+
+		<p>
+		<div class="container"><div><input type="search" placeholder="Search for lemur info..."></div>
+
+<a href="tel:+14085551212">Call the lemur hotline!</a>
+	</body>
+</html>
