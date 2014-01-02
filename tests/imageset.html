@@ -1,0 +1,35 @@
+<!doctype HTML>
+<html>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<head>
+<title>image-set test</title>
+<style>
+@viewport{ width: device-width;}
+#test {
+		margin: auto auto;
+        background-image: -webkit-image-set(url(chris_wilson_small.jpg) 1x,
+               url(chris_wilson_med.jpg) 2x,
+               url(chris_wilson_big.jpg) 3x);
+        background-size: cover;
+        width:50vmin;
+        height:50vmin;
+    }
+#test2 {
+	width:40vmin;
+	height:40vmin;
+	display: inline-block;
+	content: url(chris_wilson_med.jpg);
+}
+#test3 {
+	width:40vmin;
+	height:40vmin;
+	display: inline-block;
+	content: url(chris_wilson_big.jpg);
+}
+</style>
+</head>
+<body>
+<div id="test"></div>
+<div id="test2"></div>
+</body>
+</html>

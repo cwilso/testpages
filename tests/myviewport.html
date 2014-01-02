@@ -8,6 +8,7 @@ function updateWindowSize() {
 	document.getElementById("window").innerHTML = "" + window.innerWidth + " X " + window.innerHeight;
 	document.getElementById("viewport").innerHTML = "" + window.screen.width + " X " + window.screen.height;
 	document.getElementById("client").innerHTML = "" + document.documentElement.clientWidth + " X " + document.documentElement.clientHeight;
+	document.getElementById("dpr").innerHTML = "" + window.devicePixelRatio;
 }
 
 window.onload = function () {
@@ -44,6 +45,8 @@ div { flex-grow:1; min-height: 1em;}
 	<div id="window"></div>
 	<div>Its client size is</div>
 	<div id="client"></div>
+	<div>Its devicePixelRatio is</div>
+	<div id="dpr"></div>
 	<div class="spacer"></div>
 </body>
 </html>
